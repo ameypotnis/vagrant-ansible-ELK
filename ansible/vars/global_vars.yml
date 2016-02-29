@@ -1,0 +1,3 @@
+---
+es_address: http://log.elkexample.com/es/
+logstash_domain: log.elkexample.com:5043

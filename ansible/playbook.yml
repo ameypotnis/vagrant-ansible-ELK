@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+
+  vars_files: 
+  - vars/global_vars.yml
+
+  tasks:
+    - name: update apt cache
+      apt: update_cache=yes
+    
+    - include: tasks/apache.yml
+
+  roles:
+    - { role: logstash }
